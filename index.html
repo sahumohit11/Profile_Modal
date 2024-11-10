@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Modal</title>
+    <link rel="shortcut icon" href="./asserts/profile.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+        integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   
+    <div class="wrapper">
+
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+
+        <div class="card-wrapper">
+
+            <div class="userimg">
+                <img src="./asserts/user.JPG" alt="user" width="110px" class="imagediv">
+            </div>
+
+            <div class="user-name"><h2>Mohit Sahu</h2> </div>
+            <div class="designation">
+                <h3>Software Developer</h3>
+            </div>
+            <div class="bottom-group">
+
+                <button onclick="openModel()" class="btn-share btn-card">
+                    <i class="ri-share-forward-line"></i>
+                    <div>share my profile</div>
+                </button>
+                <button class="btn-follow btn-card"><a href="https://www.linkedin.com/in/mohit-sahu-8965b4224/">Connect Me</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Component -->
+
+    <div class="model">
+        <div class="modal-header">
+            <h1>Share My Profile</h1>
+            <div>
+                <i onclick="closeModel()" class="ri-close-fill"></i>
+            </div>
+        </div>
+
+
+        <div class="modelcontainer">
+            <h3>Share this Via</h3>
+            
+            <div class="icon-container">
+                <a href="https://www.facebook.com" target="_blank" class="icon" id="facebook">
+                    <i class="ri-facebook-circle-line"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="icon" id="twitter">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="icon" id="instagram">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://www.whatapp.com" target="_blank" class="icon" id="whatapp">
+                    <i class="ri-whatsapp-line"></i>
+                </a>
+                <a href="https://www.telegram.com" target="_blank" class="icon" id="telegram">
+                    <i class="ri-telegram-line"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- overlay -->
+    <div class="overlay" onclick="closeModel()"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
